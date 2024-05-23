@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1"/>
+
+  <!--fav icon-->
+  <link rel="icon" type="image/png" href=" https://cdn.salla.network/images/logo/logo-square.png">
+  <link rel="apple-touch-icon-precomposed" href="https://cdn.salla.network/images/logo/logo-square.png">
+  <meta name="msapplication-TileColor" content="#BAF3E6">
+  <meta name="msapplication-TileImage" content="https://cdn.salla.network/images/logo/logo-square.png">
+
+  <!--theme color-->
+  <meta name="theme-color" content="#BAF3E6">
+  <meta name="msapplication-navbutton-color" content="#BAF3E6">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#BAF3E6">
+
+  <link rel="stylesheet" href="https://cdn.salla.network/fonts/pingarlt.css?v=1.0">
+  <link rel="stylesheet" href="https://cdn.salla.network/fonts/sallaicons.css">
+  <link rel="stylesheet" href="./app.css">
+  <title>متجر تجريبي</title>
+</head>
+<body class="w-full min-h-screen bg-gray-50 flex flex-col items-start justify-start">
+<header class="w-full">
+  <div class="container">
+    <div class="md:py-6 py-4">
+      <div class="flex justify-between flex-col sm:flex-row gap-4 items-center">
+        <!-- store logo & title -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 relative">
+          <a href="index.html" class="block w-[80px] h-[80px] bg-gray-50 p-2 rounded-full border-4 border-secondary-50">
+            <img src="https://cdn.salla.network/images/logo/logo-square.png" alt="Logo" />
+          </a>
+          <div class="flex flex-col">
+            <h1 class="text-xl">متجر التجربة الجميلة</h1>
+            <small class="text-gray-400">متجرك لكل تجاربك وأفكارك الجميلة</small>
+          </div>
+        </div>
+        <!-- cart and user -->
+        <div class="flex items-center gap-4">
+          <a href="login.html" type="button" class="w-[40px] h-[40px] rounded-full text-center flex items-center justify-center bg-secondary-50 text-primary">
+            <i class="sicon-user"></i>
+          </a>
+          <a href="cart.html" type="button" class="w-[40px] h-[40px] rounded-full text-center flex items-center justify-center bg-secondary-50 text-primary">
+            <i class="sicon-shopping-bag"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="w-full main flex-auto">
+  <div class="container">
+    <div class="p-2 sm:p-4 bg-white rounded-lg shadow-4xl">
+      <!-- slider -->
+      <div class="w-full  bg-gray-100 rounded-lg mb-8">
+        <img src="images/main-slider/01.png" class="w-full aspect-video rounded-lg" alt="" />
+      </div>
+      <div class="flex items-center justify-between gap-4 mb-4">
+        <div class="flex flex-col gap-1 flex-1">
+          <label for="product_query" class="hidden">ابحث عن منتج</label>
+          <input type="text" id="product_query" name="product_query" class="w-full p-2 bg-white appearance-none rounded-md border text-md" placeholder="ادخل اسم المنتج..." />
+        </div>
+        <div class="flex flex-col gap-1 shrink-0 sm:min-w-[180px]">
+          <label for="categories" class="hidden">اختر تصنيف</label>
+          <select id="categories" name="categories" class="bg-white border text-md rounded-md focus:ring-secondary-50 focus:border-secondary-50 block w-full px-2 py-1">
+            <option selected value="all">الكل</option>
+            <option value="cat_1">تصنيف ١</option>
+            <option value="cat_2">تصنيف ٢</option>
+            <option value="cat_3">تصنيف ٣</option>
+            <option value="cat_4">تصنيف ٤</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2 sm:gap-4">
+        <!-- product-entry - infinite scroll -->
+        <div class="rounded-lg border-2 border-gray-50 flex flex-col items-start justify-start md:p-3 p-2 relative">
+          <a href="product-details.html" class="block w-full relative mb-4">
+            <img src="images/products/01.png" class="w-full aspect-4/3 object-cover rounded-lg" alt="product" />
+          </a>
+          <div class="w-full flex flex-col flex-1 items-start justify-start gap-4">
+            <div class="flex items-center justify-center flex-col gap-1">
+              <a href="#" class="block w-full text-primary text-center">
+                <h2 class="text-sm">سماعات apple AirPods Max  الاصدار الجديد</h2>
+              </a>
+              <small class="block text-xs w-full text-center">الاصدار الاحدث و الافضل حتى اليوم</small>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2 text-gray-300 w-full">
+              <a class="text-xs text-gray-500 underline" href="#">تصنيف اول</a><a class="text-xs text-gray-500 underline" href="#">تصنيف ثاني</a>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center w-full my-4 gap-0 sm:gap-2">
+            <span class="font-medium text-md">2,250.00 SAR</span>
+            <span class="font-medium text-sm line-through text-gray-300">2,500.00 SAR</span>
+          </div>
+          <button type="button" class="w-full bg-primary text-white p-2 text-md rounded-md">إضافة للسلة</button>
+        </div>
+        <!-- product-entry -->
+        <div class="rounded-lg border-2 border-gray-50 flex flex-col items-start justify-start md:p-3 p-2 relative">
+          <a href="product-details.html" class="block w-full relative mb-4">
+            <img src="images/products/02.png" class="w-full aspect-4/3 object-cover rounded-lg" alt="product" />
+          </a>
+          <div class="w-full flex flex-col flex-1 items-start justify-start gap-4">
+            <div class="flex items-center justify-center flex-col gap-1">
+              <a href="#" class="block w-full text-primary text-center">
+                <h2 class="text-sm">سماعات apple AirPods Max  الاصدار الجديد</h2>
+              </a>
+              <small class="block text-xs w-full text-center">الاصدار الاحدث و الافضل حتى اليوم</small>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2 text-gray-300 w-full">
+              <a class="text-xs text-gray-500 underline" href="#">تصنيف اول</a><a class="text-xs text-gray-500 underline" href="#">تصنيف ثاني</a>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center w-full my-4 gap-0 sm:gap-2">
+            <span class="font-medium text-md">2,250.00 SAR</span>
+            <span class="font-medium text-sm line-through text-gray-300">2,500.00 SAR</span>
+          </div>
+          <button type="button" class="w-full bg-primary text-white p-2 text-md rounded-md">إضافة للسلة</button>
+        </div>
+        <!-- product-entry -->
+        <div class="rounded-lg border-2 border-gray-50 flex flex-col items-start justify-start md:p-3 p-2 relative">
+          <a href="product-details.html" class="block w-full relative mb-4">
+            <img src="images/products/03.png" class="w-full aspect-4/3 object-cover rounded-lg" alt="product" />
+          </a>
+          <div class="w-full flex flex-col flex-1 items-start justify-start gap-4">
+            <div class="flex items-center justify-center flex-col gap-1">
+              <a href="#" class="block w-full text-primary text-center">
+                <h2 class="text-sm">سماعات apple AirPods Max  الاصدار الجديد</h2>
+              </a>
+              <small class="block text-xs w-full text-center">الاصدار الاحدث و الافضل حتى اليوم</small>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2 text-gray-300 w-full">
+              <a class="text-xs text-gray-500 underline" href="#">تصنيف اول</a><a class="text-xs text-gray-500 underline" href="#">تصنيف ثاني</a>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center w-full my-4 gap-0 sm:gap-2">
+            <span class="font-medium text-md">2,250.00 SAR</span>
+            <span class="font-medium text-sm line-through text-gray-300">2,500.00 SAR</span>
+          </div>
+          <button type="button" class="w-full bg-primary text-white p-2 text-md rounded-md">إضافة للسلة</button>
+        </div>
+        <!-- product-entry -->
+        <div class="rounded-lg border-2 border-gray-50 flex flex-col items-start justify-start md:p-3 p-2 relative">
+          <a href="product-details.html" class="block w-full relative mb-4">
+            <img src="images/products/04.png" class="w-full aspect-4/3 object-cover rounded-lg" alt="product" />
+          </a>
+          <div class="w-full flex flex-col flex-1 items-start justify-start gap-4">
+            <div class="flex items-center justify-center flex-col gap-1">
+              <a href="#" class="block w-full text-primary text-center">
+                <h2 class="text-sm">سماعات apple AirPods Max  الاصدار الجديد</h2>
+              </a>
+              <small class="block text-xs w-full text-center">الاصدار الاحدث و الافضل حتى اليوم</small>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2 text-gray-300 w-full">
+              <a class="text-xs text-gray-500 underline" href="#">تصنيف اول</a><a class="text-xs text-gray-500 underline" href="#">تصنيف ثاني</a>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center w-full my-4 gap-0 sm:gap-2">
+            <span class="font-medium text-md">2,250.00 SAR</span>
+            <span class="font-medium text-sm line-through text-gray-300">2,500.00 SAR</span>
+          </div>
+          <button type="button" class="w-full bg-primary text-white p-2 text-md rounded-md">إضافة للسلة</button>
+        </div>
+      </div>
+      <!-- loader -->
+      <div role="status" class="flex items-center justify-center p-2 hidden">
+        <svg aria-hidden="true" class="w-6 h-6 mr-2 text-gray-200 animate-spin fill-primary" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+          <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="w-full h-[80px] flex items-center justify-center text-primary bg-secondary-50 mt-4 md:mt-6">
+  <p class="text-sm">كافة الحقوق محفوظة لدى: متجر التجربة الجميلة | 2023</p>
+</footer>
+</body>
+<script type="text/javascript" src="./app.js"></script>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "salla",
+  "version": "0.1.0",
+  "description": "Salla React-TypeScript Challenge",
+  "author": "salla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SallaChallenges/react-typescript-challenge"
+  },
+  "theme_uri": "https://salla.com",
+  "author_uri": "https://salla.com",
+  "text_domain": "salla",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "webpack --mode production",
+    "prod": "webpack --mode production",
+    "development": "webpack --mode development",
+    "watch": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.18.6",
+    "@babel/preset-env": "^7.16.5",
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.3",
+    "babel-loader-exclude-node-modules-except": "^1.2.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.5.0",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "glob": "^8.0.3",
+    "mini-css-extract-plugin": "^2.4.3",
+    "postcss": "^8.4.18",
+    "postcss-import": "^14.1.0",
+    "postcss-loader": "^7.0.0",
+    "postcss-nested-ancestors": "^3.0.0",
+    "postcss-preset-env": "^7.7.1",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "tailwindcss": "^3.2.0",
+    "tailwindcss-rtl": "^0.9.0",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "swiper": "^8.4.4"
+  }
+}
